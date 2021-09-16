@@ -7,7 +7,8 @@ $(document).ready(function () {
     "/" +
     currDay.getDate();
   document.getElementById("currentDay").innerHTML = currDay;
-  console.log(currDay);
+  // console.log(currDay);
+  console.log(newday);
   //var bttn = document.createElement("button");
   //bttn.innerHTML = "Click Me";
   //document.body.appendChild(bttn);
