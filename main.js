@@ -23,10 +23,10 @@ $(document).ready(function () {
   // on page load, any info from local storage will populate time blocks "get"
   function timecompare() {
     var currentHour = moment().hours();
-
+    console.log(currentHour);
     $(".block").each(function () {
       var hourblock = parseInt($(this).attr("id").split("-")[1]);
-
+      console.log(hourblock);
       if (hourblock < currentHour) {
         $(this).addClass("past");
       } else if (hourblock === currentHour) {
