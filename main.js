@@ -38,6 +38,9 @@ $(document).ready(function () {
     });
   }
   timecompare();
-
-  $;
 });
+
+localStorage.setItem("textarea");
+document.getElementById("result").innerHTML = localStorage.getItem(
+  "Task added to Local Storage"
+);
