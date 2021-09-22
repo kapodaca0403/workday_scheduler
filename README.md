@@ -24,6 +24,8 @@ For the entire day, it is divided into sections. Your calendar will display the 
 
 This calendar will also display the current day, month and year.
 
+![Work Day Scheduler](https://user-images.githubusercontent.com/87509827/134294767-ca438e9c-900d-4056-9de8-f4e6db2b9abb.gif)
+
 ## Tests
 
 undefined
