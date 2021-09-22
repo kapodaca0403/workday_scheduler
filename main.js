@@ -9,9 +9,6 @@ $(document).ready(function () {
   document.getElementById("currentDay").innerHTML = currDay;
   // console.log(currDay);
   console.log(newday);
-  //var bttn = document.createElement("button");
-  //bttn.innerHTML = "Click Me";
-  //document.body.appendChild(bttn);
 
   // target each timeblock by div id
   // compare timeblocks to the current hour
@@ -21,6 +18,7 @@ $(document).ready(function () {
   // click listener on each input field
   // save button needs click listener, will set the input field text into local storage, key will be input field ID and value will be user input
   // on page load, any info from local storage will populate time blocks "get"
+
   function timecompare() {
     var currentHour = moment().hours();
     $(".block").each(function () {
@@ -54,10 +52,3 @@ $(".saveBtn").click(function () {
 $("textarea").each(function () {
   $(this).val(localStorage.getItem($(this).attr("id")));
 });
-
-// $("#hourblock-17").val(localStorage.getItem("hourblock-17"));
-//let i = [9, 10, 11, 12, 13, 14, 15, 16, 17];
-// for (var i = 0; i < 9; i++) {
-// var getStor = (localStorage.getItem)
-//var getStor = $(this).siblings("textarea").key(i);
-//$("textarea").append(localStorage.getItem(localStorage.key("timeblock")));
