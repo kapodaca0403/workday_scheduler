@@ -15,7 +15,7 @@ $(document).ready(function () {
 
   // target each timeblock by div id
   // compare timeblocks to the current hour
-  // split current day into date and time , split time into hours mins, secs
+  // split current day into date and time , split time into hours mins, consecs
   // compare current days hours to the current hour on the timeblock , set a class
   // each time block will need to have an input field , target the input field by ID
   // click listener on each input field
@@ -40,7 +40,24 @@ $(document).ready(function () {
   timecompare();
 });
 
-localStorage.setItem("textarea");
-document.getElementById("result").innerHTML = localStorage.getItem(
-  "Task added to Local Storage"
-);
+$(".saveBtn").click(function () {
+  event.preventDefault();
+  var savedInput = $(this).siblings("textarea").val();
+  console.log("Saving task to Local Storage");
+  var input = $(this).siblings("textarea").attr("id");
+  localStorage.setItem(input, savedInput);
+  console.log(input);
+  //localStorage.getItem(savedInput);
+});
+
+//accessing the textarea , accessing all textarea using .each function , inside of function to iterate over all of textarea, can access elements by using $(this) grabbing value from local storage from first textarea , after first $this element being grabbeed we can now access the next one.
+$("textarea").each(function () {
+  $(this).val(localStorage.getItem($(this).attr("id")));
+});
+
+// $("#hourblock-17").val(localStorage.getItem("hourblock-17"));
+//let i = [9, 10, 11, 12, 13, 14, 15, 16, 17];
+// for (var i = 0; i < 9; i++) {
+// var getStor = (localStorage.getItem)
+//var getStor = $(this).siblings("textarea").key(i);
+//$("textarea").append(localStorage.getItem(localStorage.key("timeblock")));
